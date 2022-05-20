@@ -14,4 +14,8 @@ stressLevel(string) {
   this.stressLevel = string;
 }
 
+activityLevel(string){
+  
+}
+
 }
