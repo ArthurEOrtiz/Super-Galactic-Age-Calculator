@@ -22,13 +22,21 @@ Keep it simple! You do not have to use the JavaScript Date object to complete th
 
 
 ## Technologies Used 
+
 * html
 * css / boostrap
 * javascript 
 * jquery 
 * json
+* markdown
 * github
 
+## Set up
+
+1. Clone repo onto your computer.
+2. Open directory via teriminal and excute `$ npm install`
+3. Once instal is completed, in the terminl, run  `$ npm run build`
+4. To open the project in your browers, run `$ npm run start`
 
 
 ## Known Bugs 
