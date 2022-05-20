@@ -16,6 +16,13 @@ describe('Human',()=> {
     expect(human.jupiterYears).toEqual(2);
   });
 
+  test('should return the stress levels from collected from user input; low, med, high', ()=>{
+    const human = new Human(34);
+    human.stressLevel("low");
+    expect(human.stressLevel).toEqual("low");
+
+  });
+
 
 
 });

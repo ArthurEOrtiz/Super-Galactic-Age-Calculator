@@ -10,4 +10,8 @@ solarAgeCalc(){
   this.jupiterYears = Math.floor(this.earthYears / 11.86);
 }
 
+stressLevel(string) {
+  
+}
+
 }
