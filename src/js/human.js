@@ -11,7 +11,7 @@ solarAgeCalc(){
 }
 
 stressLevel(string) {
-  
+  this.stressLevel = string;
 }
 
 }
