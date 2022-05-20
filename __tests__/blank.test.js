@@ -28,5 +28,13 @@ describe('Human',()=> {
     expect(human.activityLevel).toEqual("medium");
   });
 
+  test('should calculate life expectansy via stress and activity inputs', ()=>{
+    const human = new Human(34);
+    human.stressLevel("high");
+    human.activityLevel("high");
+    human.deathClock();
+    expect(human.expectedEarthDeath).toEqual(70);
+  });
+
 
 });

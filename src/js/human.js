@@ -18,4 +18,8 @@ activityLevel(string){
   this.activityLevel = string;
 }
 
+deathClock(){
+
+}
+
 }
