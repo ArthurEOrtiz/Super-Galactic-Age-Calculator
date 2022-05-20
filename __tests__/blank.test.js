@@ -25,7 +25,7 @@ describe('Human',()=> {
   test('should return the activity levels from collected from user input; low, medium, high', ()=>{
     const human = new Human(34);
     human.activityLevel("medium");
-    expect(human.activtyLevel).toEqual("medium");
+    expect(human.activityLevel).toEqual("medium");
   });
 
 
