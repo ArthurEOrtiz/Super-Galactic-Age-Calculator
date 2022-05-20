@@ -1,11 +1,13 @@
 export default class Human {
   constructor(age) {
     this.earthYears = age;
-    this.mercuryYears = Math.floor(age / .24);
-    this.venusYears = Math.floor(age / .62);
-    this.marsYears = Math.floor(age / 1.88);
-    this.jupiterYears = Math.floor(age / 11.86);
-
   }
+
+solarAgeCalc(){
+  this.mercuryYears = Math.floor(this.earthYears / .24);
+  this.venusYears = Math.floor(this.earthYears / .62);
+  this.marsYears = Math.floor(this.earthYears / 1.88);
+  this.jupiterYears = Math.floor(this.earthYears / 11.86);
+}
 
 }
