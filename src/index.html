@@ -3,9 +3,31 @@
 <head>
   <title></title>
 </head>
-<header><h1>Blank Website</h1></header>
+<header><h1>Galactic Death Clock</h1></header>
 <body>
-    <p>this is my template stuff</p>
-  
+  <div class  = "container align-items-center">
+    <br>
+  <form id="userInputForm">
+    <div class="row p-3 g-5 align-items-center">
+      <div class="col-auto">
+        <label for="userInput" class="col-form-label">Enter your earthly age HUMAN!</label>
+      </div>
+      <div class="col-auto">
+        <input type="number" min="1" id="userAge" class="form-control">
+      </div>
+      <div class="col-auto">
+        <span id="passwordHelpInline" class="form-text">
+          Must be a positive number!
+        </span>
+      </div>
+      
+    </div>
+    <div class="p-3">
+    <button type="submit" class="btn btn-light">Calculate your life!</button>
+    </div>
+
+  </form>
+
+  </div>
 </body>
 </html>
