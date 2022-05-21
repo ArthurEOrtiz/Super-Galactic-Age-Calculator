@@ -14,6 +14,25 @@ solarAgeCalc(){
 lifeFactors(stress, activity){
   this.stressLevel = stress;
   this.activityLevel = activity;
+
+  this.deathPoints = 0;
+
+  if (this.stressLevel === "high") {
+    this.deathPoints += 10;
+  } else if (this.stressLevel === "medium") {
+    this.deathPoints += 5;
+  } else {
+    this.deathPoints += 0;
+  }
+
+  if (this.activityLevel === "low") {
+    this.deathPoints += 10;
+  } else if (this.activityLevel === "medium") {
+    this.deathPoints += 5;
+  } else  {
+    this.deathPoints += 0;
+  }
+
 } 
 
 /*
@@ -27,23 +46,7 @@ activityLevel(string){
 
 deathClock(){
   const deathAge = 80;
-  let deathPoints = 0;
-
-  if (this.stressLevel === "high") {
-    deathPoints += 10;
-  } else if (this.stressLevel === "medium") {
-    deathPoints += 5;
-  } else {
-    deathPoints += 0;
-  }
-
-  if (this.activityLevel === "low") {
-    deathPoints += 10;
-  } else if (this.activityLevel === "medium") {
-    deathPoints += 5;
-  } else  {
-    deathPoints += 0;
-  }
+  
 
   this.expectedEarthDeath = deathAge - deathPoints;
   this.yearsPassedEarthDeath = this.earthYears - this.expectedEarthDeath;
