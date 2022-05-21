@@ -34,16 +34,29 @@ describe('Human',()=> {
       expect(human.deathPoints).toEqual(cases[i][j]);
       }
     }
+  });
 
+  test('should determing how many years a user has left to live on each planet', ()=>{
+      
+      const userInputs = ["high", "medium", "low"];
+      const cases = [[70,65,60],[75,70,65],[80,75,70]];
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+        const human = new Human(34);
+        human.lifeFactors(userInputs[i],userInputs[j]);
+        human.deathClock();
+        expect(human.expectedEarthDeath).toEqual(Math.floor(cases[i][j] - human.earthYears));
+        expect(human.expectedMercuryDeath).toEqual(Math.floor(cases[i][j] / .24) - this.mercuryYears);
+        expect(human.expectedVenusDeath).toEqual(Math.floor(cases[i][j] / .62) - this.venusYears);
+        expect(human.expectedMarsDeath).toEqual(Math.floor(cases[i][j] / 1.88) - this.marsYears);
+        expect(human.expectedJupiterDeath).toEqual(Math.floor(cases[i][j] / 11.86) - this.jupiterYears);
+        }
+      }
 
   });
 /*
-  test('should return the activity levels from collected from user input; low, medium, high', ()=>{
-    const human = new Human(34);
-    human.activityLevel("medium");
-    expect(human.activityLevel).toEqual("medium");
-  });
-
+  
   test('should calculate life expectansy via stress and activity inputs', ()=>{
     
     const userInputs = ["high", "medium", "low"]

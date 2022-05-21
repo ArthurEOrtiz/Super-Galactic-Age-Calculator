@@ -35,24 +35,16 @@ lifeFactors(stress, activity){
 
 } 
 
-/*
-stressLevel(string) {
-  this.stressLevel = string;
-}
-
-activityLevel(string){
-  this.activityLevel = string;
-}
 
 deathClock(){
+/*
   const deathAge = 80;
   
 
   this.expectedEarthDeath = deathAge - deathPoints;
   this.yearsPassedEarthDeath = this.earthYears - this.expectedEarthDeath;
 
-
-}
 */
+}
 
 }
