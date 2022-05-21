@@ -23,7 +23,20 @@ describe('Human',()=> {
     expect(human.activityLevel).toEqual("high");
   });
 
- 
+  test('should assign a death point score according to lifefactors', ()=>{
+    const userInputs = ["high", "medium", "low"];
+    const cases = [[10,15,20],[5,10,15],[0,5,10]];
+
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+      const human = new Human(34);
+      human.lifeFactors(userInputs[i],userInputs[j]);
+      expect(human.deathPoints).toEqual(cases[i][j]);
+      }
+    }
+
+
+  });
 /*
   test('should return the activity levels from collected from user input; low, medium, high', ()=>{
     const human = new Human(34);
