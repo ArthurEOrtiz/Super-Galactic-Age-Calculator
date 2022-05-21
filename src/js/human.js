@@ -19,6 +19,26 @@ activityLevel(string){
 }
 
 deathClock(){
+  const deathAge = 80;
+  let deathPoints = 0;
+
+  if (this.stressLevel === "high") {
+    deathPoints += 10;
+  } else if (this.stressLevel === "medium") {
+    deathPoints += 5;
+  } else {
+    deathPoints += 0;
+  }
+
+  if (this.activityLevel === "low") {
+    deathPoints += 10;
+  } else if (this.activityLevel === "medium") {
+    deathPoints += 5;
+  } else  {
+    deathPoints += 0;
+  }
+
+  this.expectedEarthDeath = deathAge - deathPoints;
 
 }
 

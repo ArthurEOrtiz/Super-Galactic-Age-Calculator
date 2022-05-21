@@ -29,11 +29,20 @@ describe('Human',()=> {
   });
 
   test('should calculate life expectansy via stress and activity inputs', ()=>{
-    const human = new Human(34);
-    human.stressLevel("high");
-    human.activityLevel("high");
-    human.deathClock();
-    expect(human.expectedEarthDeath).toEqual(70);
+    
+    const userInputs = ["high", "medium", "low"]
+    const cases = [[70,65,60],[75,70,65],[80,75,70]];
+    
+
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+      const human = new Human(34);
+      human.stressLevel(userInputs[i]);
+      human.activityLevel(userInputs[j]);
+      human.deathClock();
+      expect(human.expectedEarthDeath).toEqual(cases[i][j]);
+      }
+    }
   });
 
 
