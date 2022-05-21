@@ -37,14 +37,16 @@ lifeFactors(stress, activity){
 
 
 deathClock(){
-/*
-  const deathAge = 80;
+  const deathAge = 80 - this.deathPoints;
+  this.solarAgeCalc();
+  this.lifeFactors();
   
+  this.expectedEarthDeath = deathAge - this.earthYears;
+  this.expectedMercuryDeath = Math.floor(deathAge / .24) - this.mercuryYears;
+  this.expectedVenusDeath = Math.floor(deathAge / .62) - this.venusYears;
+  this.expectedMarsDeath = Math.floor(deathAge / 1.88) - this.marsYears;
+  this.expectedJupiterDeath = Math.floor(deathAge / 11.86) - this.jupiterYears;
 
-  this.expectedEarthDeath = deathAge - deathPoints;
-  this.yearsPassedEarthDeath = this.earthYears - this.expectedEarthDeath;
-
-*/
-}
+  }
 
 }

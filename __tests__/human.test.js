@@ -46,11 +46,11 @@ describe('Human',()=> {
         const human = new Human(34);
         human.lifeFactors(userInputs[i],userInputs[j]);
         human.deathClock();
-        expect(human.expectedEarthDeath).toEqual(Math.floor(cases[i][j] - human.earthYears));
-        expect(human.expectedMercuryDeath).toEqual(Math.floor(cases[i][j] / .24) - this.mercuryYears);
-        expect(human.expectedVenusDeath).toEqual(Math.floor(cases[i][j] / .62) - this.venusYears);
-        expect(human.expectedMarsDeath).toEqual(Math.floor(cases[i][j] / 1.88) - this.marsYears);
-        expect(human.expectedJupiterDeath).toEqual(Math.floor(cases[i][j] / 11.86) - this.jupiterYears);
+        expect(human.expectedEarthDeath).toEqual(cases[i][j] - human.earthYears);
+        expect(human.expectedMercuryDeath).toEqual(Math.floor(cases[i][j] / .24) - human.mercuryYears);
+        expect(human.expectedVenusDeath).toEqual(Math.floor(cases[i][j] / .62) - human.venusYears);
+        expect(human.expectedMarsDeath).toEqual(Math.floor(cases[i][j] / 1.88) - human.marsYears);
+        expect(human.expectedJupiterDeath).toEqual(Math.floor(cases[i][j] / 11.86) - human.jupiterYears);
         }
       }
 
