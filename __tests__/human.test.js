@@ -1,4 +1,4 @@
-import Human from './../src/js/human.js';
+import Human from '../src/js/human.js';
 
 describe('Human',()=> { 
 
@@ -16,12 +16,15 @@ describe('Human',()=> {
     expect(human.jupiterYears).toEqual(2);
   });
 
-  test('should return the stress levels from collected from user input; low, medium, high', ()=>{
+  test('should record life factors of stress and activity levels from user input; low, medium, high', ()=>{
     const human = new Human(34);
-    human.stressLevel("low");
+    human.lifeFactors("low","high");
     expect(human.stressLevel).toEqual("low");
+    expect(human.activityLevel).toEqual("high");
   });
 
+ 
+/*
   test('should return the activity levels from collected from user input; low, medium, high', ()=>{
     const human = new Human(34);
     human.activityLevel("medium");
@@ -56,10 +59,29 @@ describe('Human',()=> {
       human.stressLevel(userInputs[i]);
       human.activityLevel(userInputs[j]);
       human.deathClock();
-      expect(human.yearsPassedDeath).toEqual(cases[i][j]);
+      expect(human.yearsPassedEarthDeath).toEqual(cases[i][j]);
       }
     }
     });
 
+    test('will calculate the year left of the users life on all plantes; earth, mercury, venus, mars, jupiter', ()=>{
+      const userInputs = ["high", "medium", "low"];
+      const cases = [[70,65,60],[75,70,65],[80,75,70]];
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+        const human = new Human(34);
+        human.stressLevel(userInputs[i]);
+        human.activityLevel(userInputs[j]);
+        human.deathClock();
+        expect(human.expectedEarthDeath).toEqual(Math.floor(cases[i][j] - human.earthYears));
+        expect(human.expectedMercuryDeath).toEqual(Math.floor(cases[i][j] / .24) - this.mercuryYears);
+        expect(human.expectedVenusDeath).toEqual(Math.floor(cases[i][j] / .62) - this.venusYears);
+        expect(human.expectedMarsDeath).toEqual(Math.floor(cases[i][j] / 1.88) - this.marsYears);
+        expect(human.expectedJupiterDeath).toEqual(Math.floor(cases[i][j] / 11.86) - this.jupiterYears);
+        }
+      }
+    });
+*/
 
 });

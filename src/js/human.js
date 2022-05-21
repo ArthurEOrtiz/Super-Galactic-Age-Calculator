@@ -10,6 +10,13 @@ solarAgeCalc(){
   this.jupiterYears = Math.floor(this.earthYears / 11.86);
 }
 
+
+lifeFactors(stress, activity){
+  this.stressLevel = stress;
+  this.activityLevel = activity;
+} 
+
+/*
 stressLevel(string) {
   this.stressLevel = string;
 }
@@ -39,9 +46,10 @@ deathClock(){
   }
 
   this.expectedEarthDeath = deathAge - deathPoints;
-  this.yearsPassedDeath = this.earthYears - this.expectedEarthDeath;
+  this.yearsPassedEarthDeath = this.earthYears - this.expectedEarthDeath;
 
 
 }
+*/
 
 }
