@@ -46,7 +46,7 @@ describe('Human',()=> {
   });
 
   test('if the user is older than there life expectancy, if should return the diffrence', ()=>{
-    const userInputs = ["high", "medium", "low"]
+    const userInputs = ["high", "medium", "low"];
     const cases = [[20,25,30],[15,20,25],[10,15,20]];
     
 
@@ -59,10 +59,7 @@ describe('Human',()=> {
       expect(human.yearsPassedDeath).toEqual(cases[i][j]);
       }
     }
-
-
-
-  }
+    });
 
 
 });

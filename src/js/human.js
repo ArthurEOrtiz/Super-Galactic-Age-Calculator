@@ -39,6 +39,8 @@ deathClock(){
   }
 
   this.expectedEarthDeath = deathAge - deathPoints;
+  this.yearsPassedDeath = this.earthYears - this.expectedEarthDeath;
+
 
 }
 
