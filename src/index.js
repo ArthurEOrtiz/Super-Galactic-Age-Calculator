@@ -15,23 +15,36 @@ $(document).ready(function(){
 
     human.lifeFactors(stress,activity);
     human.solarAgeCalc();
-    human.deathClock();
+    
 
-    console.log(stress);
-    console.log(activity);
-    console.log (human);
     $("#mercuryAge").text(human.mercuryYears);
     $("#venusAge").text(human.venusYears);
     $("#earthAge").text(human.earthYears);
     $("#marsAge").text(human.marsYears);
     $("#jupiterAge").text(human.jupiterYears);
 
-    $("#expectedMercuryDeath").text(human.expectedMercuryDeath);
-    $("#expectedVenusDeath").text(human.expectedVenusDeath);
-    $("#expectedEarthDeath").text(human.expectedEarthDeath);
-    $("#expectedMarsDeath").text(human.expectedMarsDeath);
-    $("#expectedJupiterDeath").text(human.expectedJupiterDeath);
+  
 
+    if ( human.deathAge > human.earthYears ) {
+      human.deathClock();
+
+      $("#expectedMercuryDeath").text(human.expectedMercuryDeath);
+      $("#expectedVenusDeath").text(human.expectedVenusDeath);
+      $("#expectedEarthDeath").text(human.expectedEarthDeath);
+      $("#expectedMarsDeath").text(human.expectedMarsDeath);
+      $("#expectedJupiterDeath").text(human.expectedJupiterDeath);
+      
+    } else {
+      human.lifeClock();
+
+      $("#lifeAfterMercuryDeath").text(human.lifeAfterMercuryDeath);
+      $("#lifeAfterVenusDeath").text(human.lifeAfterVenusDeath);
+      $("#lifeAfterEarthDeath").text(human.lifeAfterEarthDeath);
+      $("#lifeAfterMarsDeath").text(human.lifeAfterMarsDeath);
+      $("#lifeAfterJupiterDeath").text(human.lifeAfterJupiterDeath);
+
+    }
     
+    console.log(human);
   });
 });

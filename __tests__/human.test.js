@@ -61,6 +61,8 @@ describe('Human',()=> {
         }
       }
 
+    });
+
   test('should return years of life lived after death expectancy', ()=>{
     const userInputs = ["high", "medium", "low"];
 
@@ -80,6 +82,6 @@ describe('Human',()=> {
 
   });
 
-  });
+
 
 });

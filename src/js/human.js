@@ -31,25 +31,32 @@ export default class Human {
       this.deathPoints += 5;
     } else  {
       this.deathPoints += 0;
-    }
+    } 
+
+    this.deathAge = 80 - this.deathPoints;
 
   } 
 
 
   deathClock(){
-    const deathAge = 80 - this.deathPoints;
     this.solarAgeCalc();
     
-    this.expectedEarthDeath = deathAge - this.earthYears;
-    this.expectedMercuryDeath = Math.floor(deathAge / .24) - this.mercuryYears;
-    this.expectedVenusDeath = Math.floor(deathAge / .62) - this.venusYears;
-    this.expectedMarsDeath = Math.floor(deathAge / 1.88) - this.marsYears;
-    this.expectedJupiterDeath = Math.floor(deathAge / 11.86) - this.jupiterYears;
+    this.expectedEarthDeath = this.deathAge - this.earthYears;
+    this.expectedMercuryDeath = Math.floor(this.deathAge / .24) - this.mercuryYears;
+    this.expectedVenusDeath = Math.floor(this.deathAge / .62) - this.venusYears;
+    this.expectedMarsDeath = Math.floor(this.deathAge / 1.88) - this.marsYears;
+    this.expectedJupiterDeath = Math.floor(this.deathAge / 11.86) - this.jupiterYears;
 
   }
 
   lifeClock() {
-    
+    this.solarAgeCalc();
+
+    this.lifeAfterEarthDeath = this.earthYears - this.deathAge;
+    this.lifeAfterMercuryDeath = this.mercuryYears - Math.floor(this.deathAge / .24);
+    this.lifeAfterVenusDeath = this.venusYears - Math.floor(this.deathAge / .62);
+    this.lifeAfterMarsDeath = this.marsYears - Math.floor(this.deathAge / 1.88);
+    this.lifeAfterJupiterDeath = this.jupiterYears - Math.floor(this.deathAge / 11.86);
   }
 
 }
