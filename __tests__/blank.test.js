@@ -45,5 +45,24 @@ describe('Human',()=> {
     }
   });
 
+  test('if the user is older than there life expectancy, if should return the diffrence', ()=>{
+    const userInputs = ["high", "medium", "low"]
+    const cases = [[20,25,30],[15,20,25],[10,15,20]];
+    
+
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+      const human = new Human(90);
+      human.stressLevel(userInputs[i]);
+      human.activityLevel(userInputs[j]);
+      human.deathClock();
+      expect(human.yearsPassedDeath).toEqual(cases[i][j]);
+      }
+    }
+
+
+
+  }
+
 
 });
