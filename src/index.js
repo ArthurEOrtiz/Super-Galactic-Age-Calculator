@@ -8,10 +8,23 @@ $(document).ready(function(){
   $('#userInputForm').submit(function(event){
     event.preventDefault();
     const userAge = parseInt($('#userAge').val());
+    const stress = $("#stress").val();
+    const activity = $("#activity").val();
 
+    console.log(stress);
+    console.log(activity);
     let human = new Human(userAge);
 
-    console.log(human);
+    human.solarAgeCalc();
+
+    $("#mercuryAge").text(human.mercuryYears);
+    $("#venusAge").text(human.venusYears);
+    $("#earthAge").text(human.earthYears);
+    $("#marsAge").text(human.marsYears);
+    $("#jupiterAge").text(human.jupiterYears);
+
+
+    
     
   });
 });

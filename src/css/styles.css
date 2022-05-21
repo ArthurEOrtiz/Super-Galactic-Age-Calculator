@@ -11,7 +11,7 @@ header {
 }
 
 ul {
-  text-align: right;
+  text-align: left;
   text-justify: inter-word;
   list-style-type: none;
 }
