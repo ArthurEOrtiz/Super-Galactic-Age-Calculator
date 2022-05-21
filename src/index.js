@@ -16,7 +16,7 @@ $(document).ready(function(){
     human.lifeFactors(stress,activity);
     human.solarAgeCalc();
     
-
+    $("#planetAge").show(100);
     $("#mercuryAge").text(human.mercuryYears);
     $("#venusAge").text(human.venusYears);
     $("#earthAge").text(human.earthYears);
@@ -26,6 +26,8 @@ $(document).ready(function(){
   
 
     if ( human.deathAge > human.earthYears ) {
+      $("#planetDeath").show(100);
+      $("#planetPassedDeath").hide(100);
       human.deathClock();
 
       $("#expectedMercuryDeath").text(human.expectedMercuryDeath);
@@ -35,6 +37,8 @@ $(document).ready(function(){
       $("#expectedJupiterDeath").text(human.expectedJupiterDeath);
       
     } else {
+      $("#planetPassedDeath").show(100);
+      $("#planetDeath").hide(100);
       human.lifeClock();
 
       $("#lifeAfterMercuryDeath").text(human.lifeAfterMercuryDeath);
@@ -45,6 +49,5 @@ $(document).ready(function(){
 
     }
     
-    console.log(human);
   });
 });

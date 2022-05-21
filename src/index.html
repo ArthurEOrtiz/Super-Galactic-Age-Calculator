@@ -8,19 +8,18 @@
   <div class="container">
     <br>
     <form id="userInputForm">
-      <div class="row p-3 g-5 align-items-center">
+      <div class="row align-items-center">
         <div class="col">
-          <label for="userInput" class="col-form-label">Enter your earthly age HUMAN!</label>
+          <label for="userInput">Enter your earthly age HUMAN!</label>
         </div>
         <div class="col">
           <input type="number" min="1" id="userAge" class="form-control" required>
         </div>
         <div class="col">
-          <p id="passwordHelpInline" class="form-text">
-            Must be a positive number!
-          </p>
+          <p class="form-text"> Must be a positive number!</p>
         </div>
-        <div class="row p-3 m-auto align-items-center">
+      </div>
+      <div class="row p-3 m-auto align-items-center">
           <div class = "col">
             <select class="form-select mb-3" id="stress" required>
               <option value ="" disable hidden>Stress Levels</option>
@@ -30,9 +29,7 @@
             </select>
             </div>
             <div class="col">
-              <p class="form-text">
-                How much stress is in your life?
-              </p>
+              <p class="form-text">How much stress is in your life?</p>
             </div>
             <div class = "col">
               <select class="form-select mb-3" id="activity" required>
@@ -41,13 +38,10 @@
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
               </select>
-              </div>
-              <div class="col">
-                <p class="form-text">
-                  How active is your life?
-                </p>
-              </div>
-        </div>
+            </div>
+            <div class="col">
+                <p class="form-text">How active is your life?</p>
+            </div>
       </div>
       <div class="p-3">
         <button type="submit" class="btn btn-light">Calculate your life!</button>
@@ -77,7 +71,7 @@
           <li>Jupiter :  <span id="expectedJupiterDeath"></span></li>
         </ul>
       </div>
-      <div class="col" id="planetpassedDeath">
+      <div class="col" id="planetPassedDeath">
         <h3>Years Passed Death</h3>
         <ul>
           <li>Mercury : <span id="lifeAfterMercuryDeath"></span></li>

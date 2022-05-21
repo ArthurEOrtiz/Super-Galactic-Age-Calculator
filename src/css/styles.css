@@ -15,3 +15,17 @@ ul {
   text-justify: inter-word;
   list-style-type: none;
 }
+
+
+
+#planetAge {
+  display: none;
+}
+
+#planetDeath {
+  display: none;
+}
+
+#planetPassedDeath {
+  display: none;
+}
