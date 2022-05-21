@@ -39,7 +39,6 @@ export default class Human {
   deathClock(){
     const deathAge = 80 - this.deathPoints;
     this.solarAgeCalc();
-    this.lifeFactors();
     
     this.expectedEarthDeath = deathAge - this.earthYears;
     this.expectedMercuryDeath = Math.floor(deathAge / .24) - this.mercuryYears;

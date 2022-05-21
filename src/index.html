@@ -7,62 +7,87 @@
 <body>
   <div class="container">
     <br>
-  <form id="userInputForm">
-    <div class="row p-3 g-5 align-items-center">
-      <div class="col">
-        <la=-09el for="userInput" class="col-form-label">Enter your earthly age HUMAN!</label>
-      </div>
-      <div class="col">
-        <input type="number" min="1" id="userAge" class="form-control">
-      </div>
-      <div class="col">
-        <p id="passwordHelpInline" class="form-text">
-          Must be a positive number!
-        </p>
-      </div>
-      <div class="row p-3 m-auto align-items-center">
-        <div class = "col">
-          <select class="form-select mb-3" id="stress">
-            <option selected disable hidden>Stress Levels</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-          </div>
-          <div class="col">
-            <p id="passwordHelpInline" class="form-text">
-              How much stress is in your life?
-            </p>
-          </div>
+    <form id="userInputForm">
+      <div class="row p-3 g-5 align-items-center">
+        <div class="col">
+          <label for="userInput" class="col-form-label">Enter your earthly age HUMAN!</label>
+        </div>
+        <div class="col">
+          <input type="number" min="1" id="userAge" class="form-control" required>
+        </div>
+        <div class="col">
+          <p id="passwordHelpInline" class="form-text">
+            Must be a positive number!
+          </p>
+        </div>
+        <div class="row p-3 m-auto align-items-center">
           <div class = "col">
-            <select class="form-select mb-3" id="activity" >
-              <option selected disable hidden>Activity Levels</option>
+            <select class="form-select mb-3" id="stress" required>
+              <option value ="" disable hidden>Stress Levels</option>
               <option value="low">Low</option>
               <option value="medium">Medium</option>
               <option value="high">High</option>
             </select>
             </div>
             <div class="col">
-              <p id="passwordHelpInline" class="form-text">
-                How active is your life?
+              <p class="form-text">
+                How much stress is in your life?
               </p>
             </div>
+            <div class = "col">
+              <select class="form-select mb-3" id="activity" required>
+                <option value="" disable hidden>Activity Levels</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+              </div>
+              <div class="col">
+                <p class="form-text">
+                  How active is your life?
+                </p>
+              </div>
+        </div>
+      </div>
+      <div class="p-3">
+        <button type="submit" class="btn btn-light">Calculate your life!</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="results" class="container">
+    <div class="row">
+      <div class="col" id="planetAge">
+      <h3>Galatic Age</h3>
+      <ul>
+        <li>Mercury : <span id="mercuryAge"></span></li>
+        <li>Venus : <span id="venusAge"></span></li>
+        <li>Earth : <span id="earthAge"></span></li>
+        <li>Mars : <span id="marsAge"></span></li>
+        <li>Jupiter :  <span id="jupiterAge"></span></li>
+      </ul>
+      </div>
+      <div class="col" id="planetDeath">
+        <h3>Years Left of Life</h3>
+        <ul>
+          <li>Mercury : <span id="expectedMercuryDeath"></span></li>
+          <li>Venus : <span id="expectedVenusDeath"></span></li>
+          <li>Earth : <span id="expectedEarthDeath"></span></li>
+          <li>Mars : <span id="expectedMarsDeath"></span></li>
+          <li>Jupiter :  <span id="expectedJupiterDeath"></span></li>
+        </ul>
+      </div>
+      <div class="col" id="planetpassedDeath">
+        <h3>Years Passed Death</h3>
+        <ul>
+          <li>Mercury : <span id=""></span></li>
+          <li>Venus : <span id=""></span></li>
+          <li>Earth : <span id=""></span></li>
+          <li>Mars : <span id=""></span></li>
+          <li>Jupiter :  <span id=""></span></li>
+        </ul>
       </div>
     </div>
-    <div class="p-3">
-    <button type="submit" class="btn btn-light">Calculate your life!</button>
-    </div>
-  </form>
-  </div>
-  <div id="result" class="container">
-    <h2>Your Galatic Age</h2>
-    <ul>
-      <li>Mercury : <span id="mercuryAge"></span></li>
-      <li>Venus : <span id="venusAge"></span></li>
-      <li>Earth : <span id="earthAge"></span></li>
-      <li>Mars : <span id="marsAge"></span></li>
-      <li>Jupiter :  <span id="jupiterAge"></span></li>
-    </ul>
   </div>
 </body>
 </html>

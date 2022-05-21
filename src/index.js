@@ -11,20 +11,27 @@ $(document).ready(function(){
     const stress = $("#stress").val();
     const activity = $("#activity").val();
 
-    console.log(stress);
-    console.log(activity);
     let human = new Human(userAge);
 
+    human.lifeFactors(stress,activity);
     human.solarAgeCalc();
+    human.deathClock();
 
+    console.log(stress);
+    console.log(activity);
+    console.log (human);
     $("#mercuryAge").text(human.mercuryYears);
     $("#venusAge").text(human.venusYears);
     $("#earthAge").text(human.earthYears);
     $("#marsAge").text(human.marsYears);
     $("#jupiterAge").text(human.jupiterYears);
 
+    $("#expectedMercuryDeath").text(human.expectedMercuryDeath);
+    $("#expectedVenusDeath").text(human.expectedVenusDeath);
+    $("#expectedEarthDeath").text(human.expectedEarthDeath);
+    $("#expectedMarsDeath").text(human.expectedMarsDeath);
+    $("#expectedJupiterDeath").text(human.expectedJupiterDeath);
 
-    
     
   });
 });
