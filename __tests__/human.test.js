@@ -55,59 +55,5 @@ describe('Human',()=> {
       }
 
   });
-/*
-  
-  test('should calculate life expectansy via stress and activity inputs', ()=>{
-    
-    const userInputs = ["high", "medium", "low"]
-    const cases = [[70,65,60],[75,70,65],[80,75,70]];
-    
-
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-      const human = new Human(34);
-      human.stressLevel(userInputs[i]);
-      human.activityLevel(userInputs[j]);
-      human.deathClock();
-      expect(human.expectedEarthDeath).toEqual(cases[i][j]);
-      }
-    }
-  });
-
-  test('if the user is older than there life expectancy, if should return the diffrence', ()=>{
-    const userInputs = ["high", "medium", "low"];
-    const cases = [[20,25,30],[15,20,25],[10,15,20]];
-    
-
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-      const human = new Human(90);
-      human.stressLevel(userInputs[i]);
-      human.activityLevel(userInputs[j]);
-      human.deathClock();
-      expect(human.yearsPassedEarthDeath).toEqual(cases[i][j]);
-      }
-    }
-    });
-
-    test('will calculate the year left of the users life on all plantes; earth, mercury, venus, mars, jupiter', ()=>{
-      const userInputs = ["high", "medium", "low"];
-      const cases = [[70,65,60],[75,70,65],[80,75,70]];
-
-      for (let i = 0; i < 3; i++) {
-        for (let j = 0; j < 3; j++) {
-        const human = new Human(34);
-        human.stressLevel(userInputs[i]);
-        human.activityLevel(userInputs[j]);
-        human.deathClock();
-        expect(human.expectedEarthDeath).toEqual(Math.floor(cases[i][j] - human.earthYears));
-        expect(human.expectedMercuryDeath).toEqual(Math.floor(cases[i][j] / .24) - this.mercuryYears);
-        expect(human.expectedVenusDeath).toEqual(Math.floor(cases[i][j] / .62) - this.venusYears);
-        expect(human.expectedMarsDeath).toEqual(Math.floor(cases[i][j] / 1.88) - this.marsYears);
-        expect(human.expectedJupiterDeath).toEqual(Math.floor(cases[i][j] / 11.86) - this.jupiterYears);
-        }
-      }
-    });
-*/
 
 });
