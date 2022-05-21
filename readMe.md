@@ -36,7 +36,7 @@ Keep it simple! You do not have to use the JavaScript Date object to complete th
 1. Clone repo onto your computer.
 2. Open directory via teriminal and excute `$ npm install`
 3. Once instal is completed, in the terminl, run  `$ npm run build`
-4. Complete a test of all the functions with `$npm run build`
+4. Complete a test of all the functions with `$npm run test`
 5. To open the project in your browers, run `$ npm run start`
 
 
